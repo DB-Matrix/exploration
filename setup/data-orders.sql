@@ -1,0 +1,70 @@
+-- Sample data for Orders Database (100 rows per table)
+
+-- Insert 100 orders
+INSERT INTO ORDERS (user_id, total_amount, order_status) VALUES
+(1001, 125.50, 'pending'), (1002, 89.99, 'processing'), (1003, 234.75, 'shipped'), (1004, 156.20, 'delivered'), (1005, 67.45, 'pending'),
+(1006, 345.80, 'processing'), (1007, 98.30, 'shipped'), (1008, 201.15, 'delivered'), (1009, 134.60, 'pending'), (1010, 278.90, 'processing'),
+(1011, 45.25, 'shipped'), (1012, 189.40, 'delivered'), (1013, 312.55, 'pending'), (1014, 76.80, 'processing'), (1015, 223.70, 'shipped'),
+(1016, 145.35, 'delivered'), (1017, 267.90, 'pending'), (1018, 98.15, 'processing'), (1019, 178.60, 'shipped'), (1020, 234.25, 'delivered'),
+(1021, 156.80, 'pending'), (1022, 89.45, 'processing'), (1023, 312.90, 'shipped'), (1024, 67.30, 'delivered'), (1025, 245.75, 'pending'),
+(1001, 134.20, 'processing'), (1002, 189.55, 'shipped'), (1003, 98.40, 'delivered'), (1004, 267.85, 'pending'), (1005, 145.60, 'processing'),
+(1006, 223.15, 'shipped'), (1007, 312.50, 'delivered'), (1008, 76.90, 'pending'), (1009, 178.25, 'processing'), (1010, 234.70, 'shipped'),
+(1011, 156.35, 'delivered'), (1012, 89.80, 'pending'), (1013, 278.45, 'processing'), (1014, 201.20, 'shipped'), (1015, 134.65, 'delivered'),
+(1016, 345.30, 'pending'), (1017, 98.75, 'processing'), (1018, 223.40, 'shipped'), (1019, 156.90, 'delivered'), (1020, 267.25, 'pending'),
+(1021, 189.60, 'processing'), (1022, 312.15, 'shipped'), (1023, 76.50, 'delivered'), (1024, 234.85, 'pending'), (1025, 145.20, 'processing'),
+(1001, 278.55, 'shipped'), (1002, 201.30, 'delivered'), (1003, 134.75, 'pending'), (1004, 345.40, 'processing'), (1005, 98.85, 'shipped'),
+(1006, 223.50, 'delivered'), (1007, 156.95, 'pending'), (1008, 267.60, 'processing'), (1009, 189.25, 'shipped'), (1010, 312.80, 'delivered'),
+(1011, 76.15, 'pending'), (1012, 234.50, 'processing'), (1013, 145.85, 'shipped'), (1014, 278.20, 'delivered'), (1015, 201.65, 'pending'),
+(1016, 134.10, 'processing'), (1017, 345.75, 'shipped'), (1018, 98.30, 'delivered'), (1019, 223.85, 'pending'), (1020, 156.40, 'processing'),
+(1021, 267.95, 'shipped'), (1022, 189.60, 'delivered'), (1023, 312.25, 'pending'), (1024, 76.70, 'processing'), (1025, 234.35, 'shipped'),
+(1001, 145.90, 'delivered'), (1002, 278.55, 'pending'), (1003, 201.20, 'processing'), (1004, 134.65, 'shipped'), (1005, 345.30, 'delivered'),
+(1006, 98.75, 'pending'), (1007, 223.40, 'processing'), (1008, 156.90, 'shipped'), (1009, 267.25, 'delivered'), (1010, 189.60, 'pending'),
+(1011, 312.15, 'processing'), (1012, 76.50, 'shipped'), (1013, 234.85, 'delivered'), (1014, 145.20, 'pending'), (1015, 278.55, 'processing'),
+(1016, 201.30, 'shipped'), (1017, 134.75, 'delivered'), (1018, 345.40, 'pending'), (1019, 98.85, 'processing'), (1020, 223.50, 'shipped'),
+(1021, 156.95, 'delivered'), (1022, 267.60, 'pending'), (1023, 189.25, 'processing'), (1024, 312.80, 'shipped'), (1025, 76.15, 'delivered');
+
+-- Insert 100 order items (one per order)
+INSERT INTO ORDER_ITEMS (order_id, product_id, quantity, price) VALUES
+(1, 1, 2, 62.75), (2, 2, 1, 89.99), (3, 3, 3, 78.25), (4, 4, 1, 156.20), (5, 5, 2, 33.73),
+(6, 6, 4, 86.45), (7, 7, 1, 98.30), (8, 8, 2, 100.58), (9, 9, 1, 134.60), (10, 10, 3, 92.97),
+(11, 11, 1, 45.25), (12, 12, 2, 94.70), (13, 13, 4, 78.14), (14, 14, 1, 76.80), (15, 15, 2, 111.85),
+(16, 16, 1, 145.35), (17, 17, 3, 89.30), (18, 18, 1, 98.15), (19, 19, 2, 89.30), (20, 20, 1, 234.25),
+(21, 21, 2, 78.40), (22, 22, 1, 89.45), (23, 23, 4, 78.23), (24, 24, 1, 67.30), (25, 25, 3, 81.92),
+(26, 26, 1, 134.20), (27, 27, 2, 94.78), (28, 28, 1, 98.40), (29, 29, 3, 89.28), (30, 30, 1, 145.60),
+(31, 31, 2, 111.58), (32, 32, 1, 312.50), (33, 33, 1, 76.90), (34, 34, 2, 89.13), (35, 35, 1, 234.70),
+(36, 36, 1, 156.35), (37, 37, 1, 89.80), (38, 38, 3, 92.82), (39, 39, 1, 201.20), (40, 40, 1, 134.65),
+(41, 41, 4, 86.33), (42, 42, 1, 98.75), (43, 43, 2, 111.70), (44, 44, 1, 156.90), (45, 45, 3, 89.08),
+(46, 46, 1, 312.15), (47, 47, 1, 76.50), (48, 48, 2, 117.43), (49, 49, 1, 145.20), (50, 50, 3, 92.85),
+(51, 1, 1, 201.30), (52, 2, 1, 134.75), (53, 3, 4, 86.35), (54, 4, 1, 98.85), (55, 5, 2, 111.75),
+(56, 6, 1, 156.95), (57, 7, 3, 89.20), (58, 8, 1, 189.25), (59, 9, 1, 312.80), (60, 10, 2, 38.08),
+(61, 11, 1, 234.50), (62, 12, 1, 145.85), (63, 13, 3, 92.73), (64, 14, 1, 201.65), (65, 15, 1, 134.10),
+(66, 16, 4, 86.44), (67, 17, 1, 98.30), (68, 18, 2, 111.93), (69, 19, 1, 267.60), (70, 20, 1, 156.40),
+(71, 21, 3, 89.32), (72, 22, 1, 189.60), (73, 23, 1, 312.25), (74, 24, 2, 38.35), (75, 25, 1, 234.35),
+(76, 26, 1, 145.90), (77, 27, 3, 92.85), (78, 28, 1, 201.20), (79, 29, 1, 134.65), (80, 30, 4, 86.33),
+(81, 31, 1, 98.75), (82, 32, 2, 111.70), (83, 33, 1, 156.90), (84, 34, 3, 89.08), (85, 35, 1, 312.15),
+(86, 36, 1, 76.50), (87, 37, 2, 117.43), (88, 38, 1, 145.20), (89, 39, 3, 92.85), (90, 40, 1, 201.30),
+(91, 41, 1, 134.75), (92, 42, 4, 86.35), (93, 43, 1, 98.85), (94, 44, 2, 111.75), (95, 45, 1, 156.95),
+(96, 46, 3, 89.20), (97, 47, 1, 189.25), (98, 48, 1, 312.80), (99, 49, 2, 38.08), (100, 50, 1, 76.15);
+
+-- Insert 100 order status history records (one per order)
+INSERT INTO ORDER_STATUS_HISTORY (order_id, status) VALUES
+(1, 'pending'), (2, 'processing'), (3, 'shipped'), (4, 'delivered'), (5, 'pending'),
+(6, 'processing'), (7, 'shipped'), (8, 'delivered'), (9, 'pending'), (10, 'processing'),
+(11, 'shipped'), (12, 'delivered'), (13, 'pending'), (14, 'processing'), (15, 'shipped'),
+(16, 'delivered'), (17, 'pending'), (18, 'processing'), (19, 'shipped'), (20, 'delivered'),
+(21, 'pending'), (22, 'processing'), (23, 'shipped'), (24, 'delivered'), (25, 'pending'),
+(26, 'processing'), (27, 'shipped'), (28, 'delivered'), (29, 'pending'), (30, 'processing'),
+(31, 'shipped'), (32, 'delivered'), (33, 'pending'), (34, 'processing'), (35, 'shipped'),
+(36, 'delivered'), (37, 'pending'), (38, 'processing'), (39, 'shipped'), (40, 'delivered'),
+(41, 'pending'), (42, 'processing'), (43, 'shipped'), (44, 'delivered'), (45, 'pending'),
+(46, 'processing'), (47, 'shipped'), (48, 'delivered'), (49, 'pending'), (50, 'processing'),
+(51, 'shipped'), (52, 'delivered'), (53, 'pending'), (54, 'processing'), (55, 'shipped'),
+(56, 'delivered'), (57, 'pending'), (58, 'processing'), (59, 'shipped'), (60, 'delivered'),
+(61, 'pending'), (62, 'processing'), (63, 'shipped'), (64, 'delivered'), (65, 'pending'),
+(66, 'processing'), (67, 'shipped'), (68, 'delivered'), (69, 'pending'), (70, 'processing'),
+(71, 'shipped'), (72, 'delivered'), (73, 'pending'), (74, 'processing'), (75, 'shipped'),
+(76, 'delivered'), (77, 'pending'), (78, 'processing'), (79, 'shipped'), (80, 'delivered'),
+(81, 'pending'), (82, 'processing'), (83, 'shipped'), (84, 'delivered'), (85, 'pending'),
+(86, 'processing'), (87, 'shipped'), (88, 'delivered'), (89, 'pending'), (90, 'processing'),
+(91, 'shipped'), (92, 'delivered'), (93, 'pending'), (94, 'processing'), (95, 'shipped'),
+(96, 'delivered'), (97, 'pending'), (98, 'processing'), (99, 'shipped'), (100, 'delivered');
