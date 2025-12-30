@@ -24,8 +24,11 @@ public class SchemaSyncScheduler {
     private Neo4jSyncService neo4jSyncService;
 
     /**
-     * Scheduled task that runs every 5 minutes
-     * Discovers tables and foreign keys from both PostgreSQL databases and syncs to Neo4j
+     * Trigger a periodic schema discovery for configured PostgreSQL databases and sync the results to Neo4j.
+     *
+     * Discovers tables and foreign keys from the orders_db and products_db databases, aggregates the discovered
+     * schema information, and invokes the Neo4j sync service to persist the combined schema. This method is
+     * executed on a fixed schedule by the Spring scheduler.
      */
     @Scheduled(fixedRate = 300000) // 300000 milliseconds = 5 minutes
     public void syncSchema() {
@@ -63,5 +66,4 @@ public class SchemaSyncScheduler {
         }
     }
 }
-
 
