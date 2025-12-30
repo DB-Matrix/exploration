@@ -1,0 +1,92 @@
+-- Sample data for Products Database (100 rows per table)
+
+-- Insert 100 categories (with some parent-child relationships)
+INSERT INTO CATEGORIES (name, parent_id) VALUES
+('Electronics', NULL), ('Clothing', NULL), ('Home & Garden', NULL), ('Books', NULL), ('Sports', NULL),
+('Toys', NULL), ('Computers', 1), ('Mobile Phones', 1), ('Audio', 1), ('Cameras', 1),
+('Men''s Clothing', 2), ('Women''s Clothing', 2), ('Kids'' Clothing', 2), ('Furniture', 3), ('Kitchen', 3),
+('Garden Tools', 3), ('Fiction', 4), ('Non-Fiction', 4), ('Textbooks', 4), ('Outdoor Sports', 5),
+('Indoor Sports', 5), ('Fitness', 5), ('Action Figures', 6), ('Board Games', 6), ('Puzzles', 6),
+('Laptops', 7), ('Desktops', 7), ('Accessories', 7), ('Smartphones', 8), ('Feature Phones', 8),
+('Headphones', 9), ('Speakers', 9), ('Microphones', 9), ('DSLR', 10), ('Mirrorless', 10),
+('Action Cameras', 10), ('Shirts', 11), ('Pants', 11), ('Shoes', 11), ('Dresses', 12),
+('Tops', 12), ('Accessories', 12), ('T-Shirts', 13), ('Jeans', 13), ('Sneakers', 13),
+('Sofas', 14), ('Tables', 14), ('Chairs', 14), ('Cookware', 15), ('Cutlery', 15),
+('Appliances', 15), ('Shovels', 16), ('Rakes', 16), ('Pruners', 16), ('Mystery', 17),
+('Romance', 17), ('Sci-Fi', 17), ('History', 18), ('Biography', 18), ('Science', 18),
+('Mathematics', 19), ('Physics', 19), ('Chemistry', 19), ('Camping', 20), ('Hiking', 20),
+('Cycling', 20), ('Basketball', 21), ('Tennis', 21), ('Table Tennis', 21), ('Yoga', 22),
+('Weights', 22), ('Cardio', 22), ('Superhero', 23), ('Fantasy', 23), ('Collectibles', 23),
+('Strategy', 24), ('Party Games', 24), ('Educational', 24), ('Jigsaw', 25), ('3D Puzzles', 25),
+('Brain Teasers', 25), ('Gaming Laptops', 26), ('Business Laptops', 26), ('Ultrabooks', 26), ('Gaming Desktops', 27),
+('Workstations', 27), ('All-in-One', 27), ('Keyboards', 28), ('Mice', 28), ('Monitors', 28),
+('Flagship', 29), ('Mid-Range', 29), ('Budget', 29), ('Basic', 30), ('Senior', 30),
+('Wireless', 31), ('Wired', 31), ('Earbuds', 31), ('Bluetooth', 32), ('Smart', 32);
+
+-- Insert 100 products
+INSERT INTO PRODUCTS (name, price, category_id) VALUES
+('MacBook Pro 16"', 2499.99, 26), ('Dell XPS 13', 1299.99, 26), ('HP Pavilion', 799.99, 26), ('Alienware Gaming PC', 1999.99, 27), ('iMac 24"', 1499.99, 27),
+('Logitech MX Master', 99.99, 28), ('Mechanical Keyboard', 149.99, 28), ('4K Monitor 27"', 399.99, 28), ('iPhone 15 Pro', 999.99, 29), ('Samsung Galaxy S24', 899.99, 29),
+('Google Pixel 8', 699.99, 29), ('Nokia 3310', 49.99, 30), ('Sony WH-1000XM5', 399.99, 31), ('AirPods Pro', 249.99, 31), ('JBL Flip 6', 129.99, 32),
+('Bose SoundLink', 199.99, 32), ('Blue Yeti Mic', 129.99, 33), ('Canon EOS R5', 3899.99, 34), ('Nikon D850', 3299.99, 34), ('Sony A7III', 1999.99, 35),
+('GoPro Hero 12', 399.99, 36), ('Cotton T-Shirt', 19.99, 37), ('Denim Jeans', 59.99, 38), ('Running Shoes', 89.99, 39), ('Summer Dress', 49.99, 40),
+('Blouse', 34.99, 41), ('Leather Handbag', 129.99, 42), ('Kids T-Shirt', 14.99, 43), ('Kids Jeans', 29.99, 44), ('Kids Sneakers', 39.99, 45),
+('Leather Sofa', 1299.99, 46), ('Coffee Table', 299.99, 47), ('Office Chair', 199.99, 48), ('Stainless Steel Cookware Set', 149.99, 49), ('Knife Set', 79.99, 50),
+('Stand Mixer', 399.99, 51), ('Garden Shovel', 24.99, 52), ('Leaf Rake', 19.99, 53), ('Pruning Shears', 14.99, 54), ('The Girl on the Train', 12.99, 55),
+('Pride and Prejudice', 9.99, 56), ('Dune', 14.99, 57), ('World War II History', 24.99, 58), ('Einstein Biography', 19.99, 59), ('Cosmos', 16.99, 60),
+('Calculus Textbook', 89.99, 61), ('Physics Fundamentals', 79.99, 62), ('Organic Chemistry', 94.99, 63), ('Tent 4-Person', 199.99, 64), ('Hiking Backpack', 89.99, 65),
+('Mountain Bike', 599.99, 66), ('Basketball', 29.99, 67), ('Tennis Racket', 89.99, 68), ('Table Tennis Set', 49.99, 69), ('Yoga Mat', 24.99, 70),
+('Dumbbell Set', 79.99, 71), ('Treadmill', 499.99, 72), ('Spider-Man Action Figure', 19.99, 73), ('Dragon Figurine', 24.99, 74), ('Collector''s Edition', 49.99, 75),
+('Settlers of Catan', 44.99, 76), ('Cards Against Humanity', 25.99, 77), ('Educational Puzzle', 19.99, 78), ('1000 Piece Jigsaw', 14.99, 79), ('3D Wooden Puzzle', 29.99, 80),
+('Rubik''s Cube', 9.99, 81), ('ASUS ROG Strix', 1899.99, 82), ('ThinkPad X1 Carbon', 1399.99, 83), ('MacBook Air M2', 1199.99, 84), ('Custom Gaming PC', 2499.99, 85),
+('Dell Precision', 1999.99, 86), ('iMac 27"', 1799.99, 87), ('Mechanical Keyboard RGB', 129.99, 88), ('Wireless Mouse', 59.99, 89), ('Ultrawide Monitor', 599.99, 90),
+('iPhone 15 Pro Max', 1199.99, 91), ('Samsung Galaxy A54', 449.99, 92), ('Motorola Edge', 299.99, 93), ('Jitterbug Phone', 79.99, 94), ('Senior Phone', 59.99, 95),
+('Sony WF-1000XM5', 299.99, 96), ('Beats Studio Pro', 349.99, 97), ('AirPods 3', 179.99, 98), ('Sonos Move', 399.99, 99), ('Echo Dot', 49.99, 100),
+('JBL Charge 5', 179.99, 32), ('Shure SM58', 99.99, 33), ('Audio-Technica AT2020', 99.99, 33), ('Rode Wireless Go', 199.99, 33), ('Canon 5D Mark IV', 2499.99, 34),
+('Nikon Z6', 1999.99, 35), ('Sony A7R IV', 3499.99, 34), ('Fujifilm X-T4', 1699.99, 35), ('Olympus OM-D', 1199.99, 35), ('Panasonic Lumix', 899.99, 36);
+
+-- Insert 100 product images
+INSERT INTO PRODUCT_IMAGES (product_id, image_url) VALUES
+(1, 'https://example.com/images/macbook-pro-1.jpg'), (2, 'https://example.com/images/dell-xps-1.jpg'), (3, 'https://example.com/images/hp-pavilion-1.jpg'), (4, 'https://example.com/images/alienware-1.jpg'), (5, 'https://example.com/images/imac-1.jpg'),
+(6, 'https://example.com/images/mx-master-1.jpg'), (7, 'https://example.com/images/keyboard-1.jpg'), (8, 'https://example.com/images/monitor-1.jpg'), (9, 'https://example.com/images/iphone-15-1.jpg'), (10, 'https://example.com/images/galaxy-s24-1.jpg'),
+(11, 'https://example.com/images/pixel-8-1.jpg'), (12, 'https://example.com/images/nokia-3310-1.jpg'), (13, 'https://example.com/images/sony-headphones-1.jpg'), (14, 'https://example.com/images/airpods-pro-1.jpg'), (15, 'https://example.com/images/jbl-flip-1.jpg'),
+(16, 'https://example.com/images/bose-1.jpg'), (17, 'https://example.com/images/yeti-mic-1.jpg'), (18, 'https://example.com/images/canon-r5-1.jpg'), (19, 'https://example.com/images/nikon-d850-1.jpg'), (20, 'https://example.com/images/sony-a7-1.jpg'),
+(21, 'https://example.com/images/gopro-1.jpg'), (22, 'https://example.com/images/tshirt-1.jpg'), (23, 'https://example.com/images/jeans-1.jpg'), (24, 'https://example.com/images/shoes-1.jpg'), (25, 'https://example.com/images/dress-1.jpg'),
+(26, 'https://example.com/images/blouse-1.jpg'), (27, 'https://example.com/images/handbag-1.jpg'), (28, 'https://example.com/images/kids-tshirt-1.jpg'), (29, 'https://example.com/images/kids-jeans-1.jpg'), (30, 'https://example.com/images/kids-sneakers-1.jpg'),
+(31, 'https://example.com/images/sofa-1.jpg'), (32, 'https://example.com/images/table-1.jpg'), (33, 'https://example.com/images/chair-1.jpg'), (34, 'https://example.com/images/cookware-1.jpg'), (35, 'https://example.com/images/knife-set-1.jpg'),
+(36, 'https://example.com/images/mixer-1.jpg'), (37, 'https://example.com/images/shovel-1.jpg'), (38, 'https://example.com/images/rake-1.jpg'), (39, 'https://example.com/images/pruners-1.jpg'), (40, 'https://example.com/images/book-1.jpg'),
+(41, 'https://example.com/images/book-2.jpg'), (42, 'https://example.com/images/book-3.jpg'), (43, 'https://example.com/images/book-4.jpg'), (44, 'https://example.com/images/book-5.jpg'), (45, 'https://example.com/images/book-6.jpg'),
+(46, 'https://example.com/images/textbook-1.jpg'), (47, 'https://example.com/images/textbook-2.jpg'), (48, 'https://example.com/images/textbook-3.jpg'), (49, 'https://example.com/images/tent-1.jpg'), (50, 'https://example.com/images/backpack-1.jpg'),
+(51, 'https://example.com/images/bike-1.jpg'), (52, 'https://example.com/images/basketball-1.jpg'), (53, 'https://example.com/images/tennis-1.jpg'), (54, 'https://example.com/images/pingpong-1.jpg'), (55, 'https://example.com/images/yoga-mat-1.jpg'),
+(56, 'https://example.com/images/dumbbells-1.jpg'), (57, 'https://example.com/images/treadmill-1.jpg'), (58, 'https://example.com/images/spiderman-1.jpg'), (59, 'https://example.com/images/dragon-1.jpg'), (60, 'https://example.com/images/collectible-1.jpg'),
+(61, 'https://example.com/images/catan-1.jpg'), (62, 'https://example.com/images/cards-1.jpg'), (63, 'https://example.com/images/edu-puzzle-1.jpg'), (64, 'https://example.com/images/jigsaw-1.jpg'), (65, 'https://example.com/images/3d-puzzle-1.jpg'),
+(66, 'https://example.com/images/rubiks-1.jpg'), (67, 'https://example.com/images/rog-1.jpg'), (68, 'https://example.com/images/thinkpad-1.jpg'), (69, 'https://example.com/images/macbook-air-1.jpg'), (70, 'https://example.com/images/gaming-pc-1.jpg'),
+(71, 'https://example.com/images/precision-1.jpg'), (72, 'https://example.com/images/imac-27-1.jpg'), (73, 'https://example.com/images/keyboard-rgb-1.jpg'), (74, 'https://example.com/images/wireless-mouse-1.jpg'), (75, 'https://example.com/images/ultrawide-1.jpg'),
+(76, 'https://example.com/images/iphone-max-1.jpg'), (77, 'https://example.com/images/galaxy-a54-1.jpg'), (78, 'https://example.com/images/motorola-1.jpg'), (79, 'https://example.com/images/jitterbug-1.jpg'), (80, 'https://example.com/images/senior-phone-1.jpg'),
+(81, 'https://example.com/images/sony-wf-1.jpg'), (82, 'https://example.com/images/beats-1.jpg'), (83, 'https://example.com/images/airpods-3-1.jpg'), (84, 'https://example.com/images/sonos-1.jpg'), (85, 'https://example.com/images/echo-1.jpg'),
+(86, 'https://example.com/images/jbl-charge-1.jpg'), (87, 'https://example.com/images/shure-1.jpg'), (88, 'https://example.com/images/audio-technica-1.jpg'), (89, 'https://example.com/images/rode-1.jpg'), (90, 'https://example.com/images/canon-5d-1.jpg'),
+(91, 'https://example.com/images/nikon-z6-1.jpg'), (92, 'https://example.com/images/sony-a7r-1.jpg'), (93, 'https://example.com/images/fujifilm-1.jpg'), (94, 'https://example.com/images/olympus-1.jpg'), (95, 'https://example.com/images/panasonic-1.jpg'),
+(96, 'https://example.com/images/product-96-1.jpg'), (97, 'https://example.com/images/product-97-1.jpg'), (98, 'https://example.com/images/product-98-1.jpg'), (99, 'https://example.com/images/product-99-1.jpg'), (100, 'https://example.com/images/product-100-1.jpg');
+
+-- Insert 100 product attributes
+INSERT INTO PRODUCT_ATTRIBUTES (product_id, attr_key, attr_value) VALUES
+(1, 'processor', 'M3 Pro'), (2, 'processor', 'Intel i7'), (3, 'processor', 'AMD Ryzen 5'), (4, 'processor', 'Intel i9'), (5, 'processor', 'M3'),
+(6, 'connectivity', 'Bluetooth'), (7, 'switch_type', 'Mechanical'), (8, 'resolution', '3840x2160'), (9, 'storage', '256GB'), (10, 'storage', '256GB'),
+(11, 'storage', '128GB'), (12, 'battery', '1 month'), (13, 'noise_cancellation', 'Active'), (14, 'noise_cancellation', 'Active'), (15, 'waterproof', 'IPX7'),
+(16, 'battery', '20 hours'), (17, 'type', 'USB'), (18, 'sensor', 'Full Frame'), (19, 'sensor', 'Full Frame'), (20, 'sensor', 'Full Frame'),
+(21, 'resolution', '5.3K'), (22, 'size', 'Large'), (23, 'size', '32x32'), (24, 'size', '10'), (25, 'size', 'Medium'),
+(26, 'size', 'Small'), (27, 'material', 'Leather'), (28, 'size', '8'), (29, 'size', '6'), (30, 'size', '5'),
+(31, 'material', 'Leather'), (32, 'material', 'Wood'), (33, 'material', 'Mesh'), (34, 'pieces', '10'), (35, 'pieces', '8'),
+(36, 'power', '325W'), (37, 'material', 'Steel'), (38, 'material', 'Steel'), (39, 'material', 'Steel'), (40, 'pages', '336'),
+(41, 'pages', '432'), (42, 'pages', '688'), (43, 'pages', '512'), (44, 'pages', '544'), (45, 'pages', '384'),
+(46, 'edition', '12th'), (47, 'edition', '5th'), (48, 'edition', '3rd'), (49, 'capacity', '4 person'), (50, 'capacity', '50L'),
+(51, 'frame', 'Aluminum'), (52, 'size', '7'), (53, 'weight', '300g'), (54, 'pieces', '2 paddles, 3 balls'), (55, 'thickness', '6mm'),
+(56, 'weight', '20kg total'), (57, 'max_speed', '12 km/h'), (58, 'height', '6 inches'), (59, 'height', '8 inches'), (60, 'edition', 'Limited'),
+(61, 'players', '3-4'), (62, 'players', '4-20'), (63, 'pieces', '100'), (64, 'pieces', '1000'), (65, 'pieces', '54'),
+(66, 'size', '3x3'), (67, 'processor', 'AMD Ryzen 9'), (68, 'processor', 'Intel i7'), (69, 'processor', 'M2'), (70, 'processor', 'Intel i9'),
+(71, 'processor', 'Intel Xeon'), (72, 'processor', 'M3'), (73, 'switch_type', 'Cherry MX'), (74, 'dpi', '16000'), (75, 'resolution', '3440x1440'),
+(76, 'storage', '512GB'), (77, 'storage', '128GB'), (78, 'storage', '128GB'), (79, 'screen', 'Large'), (80, 'screen', 'Simple'),
+(81, 'noise_cancellation', 'Active'), (82, 'noise_cancellation', 'Active'), (83, 'battery', '6 hours'), (84, 'battery', '11 hours'), (85, 'voice_assistant', 'Alexa'),
+(86, 'waterproof', 'IPX7'), (87, 'type', 'Dynamic'), (88, 'type', 'Condenser'), (89, 'type', 'Wireless'), (90, 'sensor', 'Full Frame'),
+(91, 'sensor', 'Full Frame'), (92, 'sensor', 'Full Frame'), (93, 'sensor', 'APS-C'), (94, 'sensor', 'Micro Four Thirds'), (95, 'sensor', 'Micro Four Thirds'),
+(96, 'color', 'Black'), (97, 'color', 'Silver'), (98, 'color', 'Blue'), (99, 'color', 'Red'), (100, 'color', 'White');

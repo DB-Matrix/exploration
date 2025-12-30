@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  postgres-orders:
+    image: postgres:15-alpine
+    container_name: postgres-orders
+    environment:
+      POSTGRES_USER: orders_user
+      POSTGRES_PASSWORD: orders_password
+      POSTGRES_DB: orders_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init-orders.sql:/docker-entrypoint-initdb.d/01-init-orders.sql
+      - ./data-orders.sql:/docker-entrypoint-initdb.d/02-data-orders.sql
+      - postgres-orders-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U orders_user -d orders_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  postgres-products:
+    image: postgres:15-alpine
+    container_name: postgres-products
+    environment:
+      POSTGRES_USER: products_user
+      POSTGRES_PASSWORD: products_password
+      POSTGRES_DB: products_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init-products.sql:/docker-entrypoint-initdb.d/01-init-products.sql
+      - ./data-products.sql:/docker-entrypoint-initdb.d/02-data-products.sql
+      - postgres-products-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U products_user -d products_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j
+    environment:
+      NEO4J_AUTH: neo4j/neo4j_password
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-orders-data:
+  postgres-products-data:
+  neo4j-data:
+  neo4j-logs:
+
